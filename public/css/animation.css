@@ -1,0 +1,295 @@
+/* Animasi rotasi ikon hamburger */
+    .line {
+      transition: all 0.3s ease-in-out;
+    }
+    .rotate-1 {
+      transform: rotate(45deg) translateY(12px);
+    }
+    .rotate-2 {
+      opacity: 0;
+    }
+    .rotate-3 {
+      transform: rotate(-45deg) translateY(-12px);
+    }
+
+
+@keyframes flip {
+  from {
+    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
+    animation-timing-function: ease-out;
+  }
+
+  40% {
+    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
+      rotate3d(0, 1, 0, -190deg);
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
+      rotate3d(0, 1, 0, -170deg);
+    animation-timing-function: ease-in;
+  }
+
+  80% {
+    transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0)
+      rotate3d(0, 1, 0, 0deg);
+    animation-timing-function: ease-in;
+  }
+
+  to {
+    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+    animation-timing-function: ease-in;
+  }
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+@keyframes flipInY {
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+
+  to {
+    transform: perspective(400px);
+  }
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+@keyframes zoomInDown {
+  from {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+@keyframes backInLeft {
+  0% {
+    transform: translateX(-2000px) scale(0.7);
+    opacity: 0.7;
+  }
+
+  80% {
+    transform: translateX(0px) scale(0.7);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+@keyframes lightSpeedInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0) skewX(30deg);
+    opacity: 0;
+  }
+
+  60% {
+    transform: skewX(-20deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: skewX(5deg);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+@keyframes jackInTheBox {
+  from {
+    opacity: 0;
+    transform: scale(0.1) rotate(30deg);
+    transform-origin: center bottom;
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  70% {
+    transform: rotate(3deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  0.1% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  50.1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* /////////////////////////////////////////////////////// */
+  .animation-typewriter {
+    position: relative;
+    
+  }
+
+  .animation-typewriter::before {
+    content: "";
+    position: absolute;
+    animation: typewriter 3s steps(23) forwards;
+    background-color: #101828;
+    inset: calc(var(--spacing) * 0);
+  }
+
+  .animation-typewriter::after {
+    content: "";
+    position: absolute;
+    animation: typewriter 3s steps(23) forwards, blink 1s steps(23) infinite 3s;
+    background-color: #EB3223;
+    inset: calc(var(--spacing) * 0);
+    width: 0.125em;
+  }
+
+    .animation-flip {
+        animation: flip 2s ease-in-out 1 !important;
+    }
+
+    .animation-flipInY {
+        animation: flipInY 2s ease-in-out 1 !important;
+    }
+
+    .animation-fadeIn {
+        animation: fadeIn 2s ease-in-out 1 !important;
+    }
+
+    .animation-zoomInDown {
+        animation: zoomInDown 2s ease-in-out 1 !important;
+    }
+
+    .animation-backInLeft {
+        animation: backInLeft 2s ease-in-out 1 !important;
+    }
+
+    .animation-lightSpeedInLeft {
+      animation: lightSpeedInLeft 2s ease-in-out 1 !important;
+    }
+
+    .animation-slideInLeft {
+        animation: slideInLeft 2s ease-in-out 1 !important;
+    }
+
+    .animation-slideInDown {
+        animation: slideInDown 2s ease-in-out 1 !important;
+    }
+    
+    .animation-jackInTheBox {
+        animation: jackInTheBox 2s ease-in-out 1 !important;
+    }
+
+
+
+    /* /////////////////////////////////////////////////////// */
+    .animation-delay-200ms {
+        animation-delay: 200ms !important;
+    }
+
+    .animation-delay-400ms {
+        animation-delay: 400ms !important;
+    }
+
+    .animation-delay-600ms {
+        animation-delay: 600ms !important;
+    }
+
+    .animation-delay-800ms {
+        animation-delay: 800ms !important;
+    }
+
+    .animation-delay-1000ms {
+        animation-delay: 1000ms !important;
+    }
+
+    .animation-delay-1200ms {
+        animation-delay: 1200ms !important;
+    }
+
+    .animation-delay-1400ms {
+        animation-delay: 1400ms !important;
+    }

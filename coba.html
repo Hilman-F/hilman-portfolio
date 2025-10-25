@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body class="bg-red-500">
+    <section class="bg-[#101828] text-white py-10 px-8 max-w-md mx-auto font-Poppins">
+  <div class="p-6 text-white bg-gray-900 min-h-screen">
+  <!-- Dropdown kategori -->
+  <div class="mb-4">
+    <label for="categorySelect" class="block mb-2 text-gray-300">Pilih Kategori</label>
+    <select id="categorySelect" class="border border-gray-600 bg-gray-800 text-white rounded-lg p-2">
+      <option value="all">Semua</option>
+      <option value="web">Web Development</option>
+      <option value="mobile">Mobile App</option>
+      <option value="design">UI/UX Design</option>
+    </select>
+  </div>
+
+  <!-- Daftar project -->
+  <div id="projectList" class="grid gap-4">
+    <div class="project border border-gray-700 rounded-lg p-4" data-category="web">
+      <h2 class="text-red-400 font-semibold">Employee Survey Web-Based</h2>
+      <p class="text-gray-400 text-sm">Kategori: Web Development</p>
+    </div>
+
+    <div class="project border border-gray-700 rounded-lg p-4" data-category="mobile">
+      <h2 class="text-blue-400 font-semibold">Inventory Management App</h2>
+      <p class="text-gray-400 text-sm">Kategori: Mobile App</p>
+    </div>
+
+    <div class="project border border-gray-700 rounded-lg p-4" data-category="design">
+      <h2 class="text-green-400 font-semibold">Company Profile UI Design</h2>
+      <p class="text-gray-400 text-sm">Kategori: UI/UX Design</p>
+    </div>
+
+    <div class=" border border-gray-700 rounded-lg p-4" data-category="web">
+      <h2 class="text-red-400 font-semibold">E-Commerce Dashboard</h2>
+      <p class="text-gray-400 text-sm">Kategori: Web Development</p>
+    </div>
+  </div>
+</div>
+
+
+</section>
+<script>
+  const select = document.getElementById('categorySelect');
+  const projects = document.querySelectorAll('.project');
+
+  select.addEventListener('change', () => {
+    const selected = select.value;
+
+    projects.forEach(project => {
+      const category = project.getAttribute('data-category');
+      if (selected === 'all' || category === selected) {
+        project.style.display = 'block';
+      } else {
+        project.style.display = 'none';
+        project.classList.add('hidden');
+      }
+    });
+  });
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hilman</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animation.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body class="min-h-screen flex flex-col bg-[#101828] bg-pattern-body bg-cover bg-center mx-auto max-w-md border-2 border-[#EB3223] font-Poppins md:max-w-3xl xl:max-w-7xl">
+    <header data-include="../../public/pages/navbar.html"></header>
+    <main class="h-full flex-grow bg-[#101828] bg-pattern pt-5 pb-16 px-8 bg-blend-overlay bg-cover bg-center bg-no-repeat md:px-14">
+        <a href="javascript:history.back()" class="text-xs xl:text-sm font-semibold inline-flex items-center gap-2 bg-[#EB3223] hover:bg-[#ad2518] text-white p-2 rounded-md">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Back</span>
+        </a>
+
+        <h1 class="text-center text-[#EB3223] text-xl md:text-2xl xl:text-3xl font-bold mt-10 animation-jackInTheBox">Smart Hydroponic Monitoring App</h1>
+        <p class="text-center text-gray-500 text-sm md:text-base xl:text-lg mb-5 animation-jackInTheBox">Mobile App Development</p>
+
+        <div class="flex flex-col gap-5 mt-5">                
+        <!-- Project 1 -->
+        <div>
+            <div class="border-2 border-[#EB3223] rounded-lg overflow-hidden hover:scale-110 transition animation-jackInTheBox">
+                <img src="../../assets/app.webp" alt="Project 4" class="w-full h-48 md:h-72 xl:h-[40rem]" />
+            </div>
+
+            <p class="text-sm md:text-lg xl:text-xl text-white text-justify indent-10 my-3 leading-relaxed animation-jackInTheBox">
+                A mobile application that serves as the user interface for a smart hydroponic system, enabling users to monitor and control cultivation parameters in real-time.
+            </p>
+            <p class="text-white text-sm md:text-lg xl:text-xl mt-2 my-3 animation-jackInTheBox"><strong class="text-[#EB3223]">Technologies Used:</strong> Flutter, Dart, Firebase</p>
+            <p class="text-white text-sm md:text-lg xl:text-xl mt-2 my-3 animation-jackInTheBox"><strong class="text-[#EB3223]">Libraries:</strong> Fl Charts</p>
+            <p class="text-white text-sm md:text-lg xl:text-xl mt-2 my-3 animation-jackInTheBox">
+                <strong class="text-[#EB3223]">Key Features:</strong> 
+                <ul class="list-disc ml-5 text-white text-sm md:text-lg xl:text-xl mt-2 space-y-1 animation-jackInTheBox">
+                    <li>Real-Time Monitoring – Display live sensor data using interactive charts</li>
+                    <li>Nutrient Tracking – View historical condition and nutrient trends</li>
+                    <li>Mode Control – Switch between manual and automatic operation</li>
+                    <li>Dosing History – Record and review nutrient dosing activity</li>
+                    <li>Cultivation Guide – Provide hydroponic tips and instructions</li>
+                </ul>
+            </p>
+        </div>
+    </main>
+
+    <footer class="bg-[#101828] bg-pattern bg-cover bg-center bg-blend-overlay text-gray-500 text-center pb-2 font-bold">
+        <p class="animation-fadeIn animation-delay-600ms">© 2025 Muhammad Hilman Fairuzi</p>
+    </footer>
+    
+    <script src="../js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+</body>
+</html>
