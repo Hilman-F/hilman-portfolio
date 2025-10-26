@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hilman</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animation.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body class="min-h-screen flex flex-col bg-[#101828] bg-pattern-body bg-cover bg-center mx-auto max-w-md border-2 border-[#EB3223] font-Poppins md:max-w-3xl xl:max-w-7xl">
+    <header data-include="../../public/pages/navbar.html"></header>
+    <main class="h-full flex-grow bg-[#101828] bg-pattern pt-5 pb-16 px-8 bg-blend-overlay bg-cover bg-center bg-no-repeat md:px-14">
+        <h1 class="text-white text-2xl font-bold mt-5 animation-lightSpeedInLeft transition md:text-3xl">PORTFOLIO</h1>
+        <div class="w-16 h-1 bg-[#EB3223] mt-0.5 animation-lightSpeedInLeft transition md:w-24"></div>
+
+        <!-- Project Section -->
+        <section>
+            <div class="flex items-center justify-end mt-10 animation-zoomInDown">
+                <!-- <div class="flex gap-3 text-[#EB3223] text-xl font-bold items-center">
+                    <i class="fa-solid fa-gear"></i>
+                    <h2>PROJECTS</h2>
+                </div> -->
+
+                <select name="filterCategory" id="filterCategory" class="p-2 bg-[#101828] text-sm text-white border border-[#EB3223] rounded cursor-pointer">
+                    <option value="All">All Categories</option>
+                    <option value="Web">Web Development</option>
+                    <option value="Apps">Mobile App Development</option>
+                    <option value="IoT">Internet of Things</option>
+                </select>
+            </div>
+
+            <div class="flex flex-col gap-5 mt-5 md:grid md:grid-cols-2 md:gap-10 xl:grid-cols-3">
+                <!-- Project 1 -->
+                <div class="project" data-category="Web">
+                    <img src="../../assets/pal.webp" alt="Project 1" class="border-2 border-[#EB3223] rounded-2xl w-full h-48 xl:h-60 object-cover my-2 hover:scale-110 transition">
+                    <a href="project-1.html" class="cursor-pointer text-[#EB3223] font-bold xl:text-lg">Employee Survey Web-Based</a>
+                    <p class="text-gray-500 text-sm xl:text-base">Web Development</p>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project" data-category="Web">
+                    <img src="../../assets/zbu.webp" alt="Project 1" class="border-2 border-[#EB3223] rounded-2xl w-full h-48 xl:h-60 object-cover my-2 hover:scale-110 transition">
+                    <a href="project-2.html" class="cursor-pointer text-[#EB3223] font-bold xl:text-lg">Hajj & Umrah Travel Landing Page</a>
+                    <p class="text-gray-500 text-sm xl:text-base">Web Development</p>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project" data-category="IoT">
+                    <img src="../../assets/iot.webp" alt="Project 1" class="border-2 border-[#EB3223] rounded-2xl w-full h-48 xl:h-60 object-cover my-2 hover:scale-110 transition">
+                    <a href="project-3.html" class="cursor-pointer text-[#EB3223] font-bold xl:text-lg">Smart Hydroponic Automation System</a>
+                    <p class="text-gray-500 text-sm xl:text-base">Internet of Things</p>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project" data-category="Apps">
+                    <img src="../../assets/app.webp" alt="Project 1" class="border-2 border-[#EB3223] rounded-2xl w-full h-48 xl:h-60 object-cover my-2 hover:scale-110 transition">
+                    <a href="project-4.html" class="cursor-pointer text-[#EB3223] font-bold xl:text-lg">Smart Hydroponic Monitoring App</a>
+                    <p class="text-gray-500 text-sm xl:text-base">Mobile App Development</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#101828] bg-pattern bg-cover bg-center bg-blend-overlay text-gray-500 text-center pb-2 font-bold">
+        <p class="animation-fadeIn animation-delay-600ms">© 2025 Muhammad Hilman Fairuzi</p>
+    </footer>
+    
+    <script src="../js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+</body>
+</html>

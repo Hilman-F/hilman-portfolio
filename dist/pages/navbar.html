@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="relative bg-[#1E2939] shadow-md py-3 px-8 md:px-14 xl:py-5 mx-auto text-white tracking-wider">
+        <div class="flex justify-between items-center">
+            <a href="../index.html" class="text-2xl text-white font-bold">Hilman</a>
+            
+            <div class="flex flex-col justify-center">
+                <div class="relative sm:max-w-xl mx-auto">
+                    <nav x-data="{ open: false }">
+                        <button id="menu-btn" class="w-12 h-12 cursor-pointer relative focus:outline-none bg-[#101828] rounded md:hidden" @click="open = !open">
+                            <div class="block absolute inset-0 flex items-center justify-center">
+                                <div class="relative w-7">
+                                    <span class="block absolute h-0.5 w-7 text-white bg-current transform transition duration-500 ease-in-out" :class="{'rotate-45': open,' -translate-y-2': !open }"></span>
+                                    <span class="block absolute h-0.5 w-5 text-white bg-current transform transition duration-500 ease-in-out" :class="{'opacity-0': open } "></span>
+                                    <span class="block absolute h-0.5 w-7 text-white bg-current transform transition duration-500 ease-in-out" :class="{'-rotate-45': open, ' translate-y-2': !open}"></span>
+                                </div>
+                            </div>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Menu desktop -->
+            <div class="hidden md:flex space-x-6 xl:space-x-8">
+                <a href="../../public/pages/resume.html" class="text-gray-600 hover:text-[#EB3223] hover:font-bold xl:text-lg">Resume</a>
+                <a href="../../public/pages/portfolio.html" class="text-gray-600 hover:text-[#EB3223] hover:font-bold xl:text-lg">Portfolio</a>
+                <a href="../../public/pages/achievement.html" class="text-gray-600 hover:text-[#EB3223] hover:font-bold xl:text-lg">Achievement</a>
+            </div>
+        </div>
+
+        <!-- Mobile Menu List -->
+        <div id="mobile-menu" class="hidden bg-[#1E2939] w-full z-50 absolute top-full left-0 md:hidden overflow-hidden transition-all duration-300 ease-in-out">
+            <a href="../../public/pages/resume.html" class="block py-2 px-4 text-gray-600 hover:text-[#EB3223] hover:font-bold hover:bg-[#101828]">Resume</a>
+            <a href="../../public/pages/portfolio.html" class="block py-2 px-4 text-gray-600 hover:text-[#EB3223] hover:font-bold hover:bg-[#101828]">Portfolio</a>
+            <a href="../../public/pages/achievement.html" class="block py-2 px-4 text-gray-600 hover:text-[#EB3223] hover:font-bold hover:bg-[#101828]">Achievement</a>
+        </div>
+    </nav>
+</body>
+</html>
